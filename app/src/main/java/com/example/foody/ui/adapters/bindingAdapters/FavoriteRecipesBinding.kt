@@ -2,6 +2,8 @@ package com.example.foody.ui.adapters.bindingAdapters
 
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.isGone
+import androidx.core.view.isVisible
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foody.data.local.entities.FavoritesEntity
@@ -11,32 +13,22 @@ class FavoriteRecipesBinding {
 
     companion object {
 
-        @BindingAdapter("viewVisibility", "setData", requireAll = false)
+        @BindingAdapter("setVisibility", "setData", requireAll = false)
         @JvmStatic
-        fun setDataAndViewVisibility(
+        fun setVisibility(
             view: View,
             favEntity: List<FavoritesEntity>?,
             adapter: FavoriteRecipesAdapter?
         ) {
-            if (favEntity.isNullOrEmpty()) {
-                when(view) {
-                    is ConstraintLayout -> {
-                        view.visibility = View.VISIBLE
-                    }
-                    is RecyclerView -> {
-                        view.visibility = View.GONE
-                    }
-                }
-            } else {
-                when(view) {
-                    is ConstraintLayout -> {
-                        view.visibility = View.GONE
-                    }
-                    is RecyclerView -> {
-                        view.visibility = View.VISIBLE
-                        adapter?.setData(favEntity)
+            when(view) {
+                is  RecyclerView -> {
+                    val checkData = favEntity.isNullOrEmpty()
+                    view.isGone = checkData
+                    if (!checkData) {
+                        favEntity?.let { adapter?.setData(it) }
                     }
                 }
+                else -> view.isVisible = favEntity.isNullOrEmpty()
             }
         }
     }
