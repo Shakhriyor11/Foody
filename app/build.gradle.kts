@@ -56,59 +56,51 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
 //    CoordinatorLayout
-    implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
+    implementation(libs.androidx.coordinatorlayout)
 
 //    Navigation Components
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 
 //    Room Components
-    kapt("androidx.room:room-compiler:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1")
-    androidTestImplementation("androidx.room:room-testing:2.6.1")
-
-//    Data Binding
-//    kapt("androidx.databinding:databinding-compiler:8.1.0")
-//    kapt("androidx.databinding:databinding-common:8.4.1")
+    kapt(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    androidTestImplementation(libs.androidx.room.testing)
 
 //    Data Store
-    implementation("androidx.datastore:datastore-preferences:1.1.1")
+    implementation(libs.androidx.datastore.preferences)
 
 //    Recyclerview
-    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation(libs.androidx.recyclerview)
 
 //    Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation (libs.retrofit)
+    implementation(libs.converter.gson)
 
 //    Dagger-Hilt
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 
 //    Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
 
 //    Lifecycle
-    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.3")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.3")
+    implementation(libs.androidx.lifecycle.extensions)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
 
 //    Image Loading Library Coil
-    implementation("io.coil-kt:coil:2.4.0")
-
-//    Gson
-//    implementation("com.google.code.gson:gson:2.10.0")
+    implementation(libs.coil)
 
 //    Shimmer
-    implementation("com.facebook.shimmer:shimmer:0.5.0")
+    implementation(libs.shimmer)
 
 //    Jsoup
-    implementation("org.jsoup:jsoup:1.16.1")
+    implementation(libs.jsoup)
 
     // Kotlin-Parcelize
-    implementation ("org.jetbrains.kotlin:kotlin-stdlib:2.0.0")
-//    implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
+    implementation (libs.kotlin.stdlib)
 
 }
