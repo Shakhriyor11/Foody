@@ -64,8 +64,8 @@
                 android:alpha="0.5"
                 android:visibility="gone"
                 android:layout_marginTop="8dp"
-                readApiResponse2="@{mainViewModel.recipesResponse}"
-                readDatabase2="@{mainViewModel.readRecipes}"
+                readApiResponse="@{mainViewModel.recipesResponse}"
+                readDatabase="@{mainViewModel.readRecipes}"
                 app:layout_constraintTop_toBottomOf="@id/iv_no_internet_connection"
                 app:layout_constraintStart_toStartOf="@id/iv_no_internet_connection"
                 app:layout_constraintEnd_toEndOf="@id/iv_no_internet_connection" />
